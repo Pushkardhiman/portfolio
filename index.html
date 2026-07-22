@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pushkar — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">pushkar<span class="cursor">_</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" class="nav-link">about</a>
+      <a href="#skills" class="nav-link">skills</a>
+      <a href="#projects" class="nav-link">projects</a>
+      <a href="#contact" class="nav-link">contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="hero-text">
+      <p class="eyebrow">// CSE undergrad, 2nd year</p>
+      <h1>Hi, I'm Pushkar.<br>I build things and break things<br>until they work.</h1>
+      <p class="hero-sub">Computer Science student learning to ship real software — right now that means Java and web-dev with a bit of AI stitched in. Console apps below, web projects landing this semester.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">view projects</a>
+        <a href="#contact" class="btn btn-ghost">get in touch</a>
+      </div>
+    </div>
+
+    <div class="photo-frame">
+      <img src="profile.jpg" alt="Photo of Pushkar" class="profile-photo" onerror="this.parentElement.classList.add('photo-frame-empty')">
+      <span class="photo-frame-hint">drop in <code>profile.jpg</code></span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <p class="section-label">01 / about</p>
+    <div class="about-grid">
+      <p class="about-text">
+        I'm a Computer Science &amp; Engineering student at Lovely Professional University, currently heading into my
+        second year. My goal this semester is straightforward: build enough real projects to land a paid internship.
+        I'm focused on Java and web-dev with AI features layered in, since that feels like the most direct path
+        from "knows the syntax" to "can ship a product."
+      </p>
+      <p class="about-text">
+        Before web dev, most of my time went into core fundamentals — C, Python, Java, and a steady diet of
+        DSA practice. That foundation is still doing a lot of the work; Java and web development is just the newest layer
+        on top of it.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section" id="skills">
+    <p class="section-label">02 / skills</p>
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <h3>languages</h3>
+        <ul class="tag-list">
+          <li>C</li><li>Python</li><li>Java</li><li>JavaScript</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>web</h3>
+        <ul class="tag-list">
+          <li>HTML</li><li>CSS</li><li>Tailwind CSS</li><li>JavaScript</li><li>MongoDB</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>tools</h3>
+        <ul class="tag-list">
+          <li>Git</li><li>GitHub</li><li>PostgreSQL</li><li>VS Code</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>currently learning</h3>
+        <ul class="tag-list">
+          <li>Java</li><li>AI and ML</li><li>Spring Boot</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <p class="section-label">03 / projects</p>
+
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-kind">console app</span>
+          <h3>Number Guessing Game</h3>
+        </div>
+        <p class="project-desc">
+          A simple command-line game — the program picks a random number and gives you hints
+          (higher / lower) until you guess it. Built to practice loops, conditionals, and basic
+          input handling.
+        </p>
+        <ul class="tag-list tag-list-small">
+          <li>Edit tech tag</li>
+        </ul>
+        <div class="project-links">
+          <a href="#" class="link-arrow">source code →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-kind">console app</span>
+          <h3>Rock, Paper, Scissors</h3>
+        </div>
+        <p class="project-desc">
+          Classic rock-paper-scissors played against the computer in the terminal, with score
+          tracking across rounds. Built while practicing control flow and functions.
+        </p>
+        <ul class="tag-list tag-list-small">
+          <li>Edit tech tag</li>
+        </ul>
+        <div class="project-links">
+          <a href="#" class="link-arrow">source code →</a>
+        </div>
+      </article>
+
+      <article class="project-card project-card-ghost">
+        <div class="project-top">
+          <span class="project-kind">in progress</span>
+          <h3>More on the way</h3>
+        </div>
+        <p class="project-desc">
+          Java + Web + AI projects built this semester will land here as they're finished.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <p class="section-label">04 / contact</p>
+    <div class="contact-wrap">
+      <h2>Let's talk.</h2>
+      <p class="about-text">Open to internship opportunities and anything web-dev related. Reach out — I reply fast.</p>
+      <div class="contact-links">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pushkardhiman530@gmail.com" class="contact-link" data-email="pushkardhiman530@gmail.com" target="_blank" rel="noopener">Email</a>
+        <a href="https://github.com/Pushkardhiman" class="contact-link" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/pushkardhiman/" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>built by Pushkar · <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
