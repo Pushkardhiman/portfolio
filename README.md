@@ -2,7 +2,6 @@
 
 My personal portfolio site — built with plain HTML, CSS, and JavaScript. No frameworks, no build step, just a clean place to point people when they ask what I've been working on.
 
-🔗 **Live site:** _add your deployed link here once it's live_
 📍 **GitHub:** [github.com/Pushkardhiman](https://github.com/Pushkardhiman)
 📍 **LinkedIn:** [linkedin.com/in/pushkardhiman](https://linkedin.com/in/pushkardhiman/)
 
@@ -10,7 +9,7 @@ My personal portfolio site — built with plain HTML, CSS, and JavaScript. No fr
 
 ## About
 
-I'm a Computer Science & Engineering student at Lovely Professional University, heading into my second year. This site is where I'm tracking projects as I build toward a paid internship — currently focused on Java and web dev (MERN stack) with a bit of AI layered in.
+I'm a Computer Science & Engineering student at Lovely Professional University, heading into my second year. This site is where I'm tracking projects as I build toward a paid internship — currently focused on Java and web dev with a bit of AI layered in.
 
 ## Tech stack
 
