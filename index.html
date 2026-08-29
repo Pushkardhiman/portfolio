@@ -15,52 +15,62 @@
 <header class="nav" id="nav">
   <div class="nav-inner">
     <a href="#top" class="nav-logo">pushkar<span class="cursor">_</span></a>
+
     <nav class="nav-links" id="navLinks">
       <a href="#about" class="nav-link">about</a>
       <a href="#skills" class="nav-link">skills</a>
       <a href="#projects" class="nav-link">projects</a>
+      <a href="#achievements" class="nav-link">achievements</a>
       <a href="#contact" class="nav-link">contact</a>
     </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span id="themeIcon">☾</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
+  <div class="scroll-progress" id="scrollProgress"></div>
 </header>
 
 <main>
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="top">
-    <div class="hero-text">
+    <div class="hero-text reveal">
       <p class="eyebrow">// CSE undergrad, 2nd year</p>
       <h1>Hi, I'm Pushkar.<br>I build things and break things<br>until they work.</h1>
-      <p class="hero-sub">Computer Science student learning to ship real software — right now that means Java and web-dev with a bit of AI stitched in. Console apps below, web projects landing this semester.</p>
+      <p class="hero-sub">Computer Science student learning to ship real software — right now that means Java and web dev with a bit of AI stitched in. Console apps below, web projects landing this semester.</p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">view projects</a>
         <a href="#contact" class="btn btn-ghost">get in touch</a>
       </div>
     </div>
 
-    <div class="photo-frame">
-      <img src="profile.jpg" alt="Photo of Pushkar" class="profile-photo" onerror="this.parentElement.classList.add('photo-frame-empty')">
-      <span class="photo-frame-hint">drop in <code>profile.jpg</code></span>
+    <div class="hero-visual">
+      <canvas id="heroShape" class="hero-shape" aria-hidden="true"></canvas>
+      <div class="photo-frame reveal">
+        <img src="profile.jpg" alt="Photo of Pushkar" class="profile-photo" onerror="this.parentElement.classList.add('photo-frame-empty')">
+        <span class="photo-frame-hint">drop in <code>profile.jpg</code></span>
+      </div>
     </div>
   </section>
 
   <!-- ===== ABOUT ===== -->
   <section class="section" id="about">
     <p class="section-label">01 / about</p>
-    <div class="about-grid">
+    <div class="about-grid reveal">
       <p class="about-text">
-        I'm a Computer Science &amp; Engineering student at Lovely Professional University, currently heading into my
-        second year. My goal this semester is straightforward: build enough real projects to land a paid internship.
-        I'm focused on Java and web-dev with AI features layered in, since that feels like the most direct path
-        from "knows the syntax" to "can ship a product."
+        I'm a Computer Science &amp; Engineering student at Lovely Professional University, currently in
+        second year, with a CGPA of 9.13. My goal this semester is straightforward: build enough real projects to
+        land a paid internship. I'm focused on Java and web development, with AI features layered in where it makes sense.
       </p>
       <p class="about-text">
         Before web dev, most of my time went into core fundamentals — C, Python, Java, and a steady diet of
-        DSA practice. That foundation is still doing a lot of the work; Java and web development is just the newest layer
-        on top of it.
+        DSA practice. That foundation is still doing a lot of the work; everything since is just the newest layer on top of it.
       </p>
     </div>
   </section>
@@ -68,36 +78,64 @@
   <!-- ===== SKILLS ===== -->
   <section class="section" id="skills">
     <p class="section-label">02 / skills</p>
-    <div class="skills-grid">
 
-      <div class="skill-card">
+    <div class="skills-grid">
+      <div class="skill-card reveal">
         <h3>languages</h3>
         <ul class="tag-list">
-          <li>C</li><li>Python</li><li>Java</li><li>JavaScript</li>
+          <li>C</li><li>C++</li><li>Python</li><li>Java</li><li>JavaScript</li>
         </ul>
       </div>
 
-      <div class="skill-card">
+      <div class="skill-card reveal">
         <h3>web</h3>
         <ul class="tag-list">
           <li>HTML</li><li>CSS</li><li>Tailwind CSS</li><li>JavaScript</li><li>MongoDB</li>
         </ul>
       </div>
 
-      <div class="skill-card">
+      <div class="skill-card reveal">
         <h3>tools</h3>
         <ul class="tag-list">
           <li>Git</li><li>GitHub</li><li>PostgreSQL</li><li>VS Code</li>
         </ul>
       </div>
 
-      <div class="skill-card">
+      <div class="skill-card reveal">
         <h3>currently learning</h3>
         <ul class="tag-list">
-          <li>Java</li><li>AI and ML</li><li>Spring Boot</li>
+          <li>Spring Boot</li><li>AI &amp; ML</li>
         </ul>
       </div>
+    </div>
 
+    <div class="skill-bars reveal">
+      <p class="skill-bars-label">Proficiency <span>(self-rated — edit freely)</span></p>
+
+      <div class="skill-bar-row">
+        <div class="skill-bar-top"><span>Java</span><span class="skill-bar-pct">80%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="80"></div></div>
+      </div>
+      <div class="skill-bar-row">
+        <div class="skill-bar-top"><span>Python</span><span class="skill-bar-pct">70%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="70"></div></div>
+      </div>
+      <div class="skill-bar-row">
+        <div class="skill-bar-top"><span>C</span><span class="skill-bar-pct">75%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="75"></div></div>
+      </div>
+      <div class="skill-bar-row">
+        <div class="skill-bar-top"><span>JavaScript</span><span class="skill-bar-pct">60%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="60"></div></div>
+      </div>
+      <div class="skill-bar-row">
+        <div class="skill-bar-top"><span>HTML / CSS</span><span class="skill-bar-pct">80%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="80"></div></div>
+      </div>
+      <div class="skill-bar-row">
+        <div class="skill-bar-top"><span>Git / GitHub</span><span class="skill-bar-pct">70%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-percent="70"></div></div>
+      </div>
     </div>
   </section>
 
@@ -106,8 +144,7 @@
     <p class="section-label">03 / projects</p>
 
     <div class="projects-grid">
-
-      <article class="project-card">
+      <article class="project-card reveal">
         <div class="project-top">
           <span class="project-kind">console app</span>
           <h3>Number Guessing Game</h3>
@@ -117,15 +154,11 @@
           (higher / lower) until you guess it. Built to practice loops, conditionals, and basic
           input handling.
         </p>
-        <ul class="tag-list tag-list-small">
-          <!-- <li>Edit tech tag</li> -->
-        </ul>
-        <div class="project-links">
-          <a href="#" class="link-arrow">source code →</a>
-        </div>
+        <ul class="tag-list tag-list-small"><li>Java</li></ul>
+        <div class="project-links"><a href="#" class="link-arrow">source code →</a></div>
       </article>
 
-      <article class="project-card">
+      <article class="project-card reveal">
         <div class="project-top">
           <span class="project-kind">console app</span>
           <h3>Rock, Paper, Scissors</h3>
@@ -134,31 +167,66 @@
           Classic rock-paper-scissors played against the computer in the terminal, with score
           tracking across rounds. Built while practicing control flow and functions.
         </p>
-        <ul class="tag-list tag-list-small">
-          <!-- <li>Edit tech tag</li> -->
-        </ul>
-        <div class="project-links">
-          <a href="#" class="link-arrow">source code →</a>
-        </div>
+        <ul class="tag-list tag-list-small"><li>Java</li></ul>
+        <div class="project-links"><a href="#" class="link-arrow">source code →</a></div>
       </article>
 
-      <article class="project-card project-card-ghost">
+      <article class="project-card reveal">
+        <div class="project-top">
+          <span class="project-kind">web app</span>
+          <h3>Link Shortener</h3>
+        </div>
+        <p class="project-desc">
+          A URL-shortening web app — currently in progress. Details will land here as the
+          project develops.
+        </p>
+        <ul class="tag-list tag-list-small"><li>In progress</li></ul>
+        <div class="project-links"><a href="#" class="link-arrow">source code →</a></div>
+      </article>
+
+      <article class="project-card project-card-ghost reveal">
         <div class="project-top">
           <span class="project-kind">in progress</span>
           <h3>More on the way</h3>
         </div>
         <p class="project-desc">
-          Java + Web + AI projects built this semester will land here as they're finished.
+          Java + web + AI projects built this semester will land here as they're finished.
         </p>
       </article>
+    </div>
+  </section>
 
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section class="section" id="achievements">
+    <p class="section-label">04 / achievements</p>
+
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <span class="stat-number" data-count="250" data-suffix="+">0+</span>
+        <span class="stat-label">Overall questions solved across platforms</span>
+      </div>
+
+      <div class="stat-card reveal">
+        <span class="stat-number" data-count="100" data-suffix="+">0+</span>
+        <span class="stat-label">Questions solved on LeetCode</span>
+      </div>
+
+      <!-- <div class="stat-card reveal">
+        <span class="stat-number">Runner-up</span>
+        <span class="stat-label">State-Level Quiz Competition</span>
+      </div> -->
+
+      <div class="stat-card reveal">
+        <span class="stat-number">Runner Up</span>
+        <span class="stat-label">Zonal-Level Quiz Competition</span>
+      </div>
     </div>
   </section>
 
   <!-- ===== CONTACT ===== -->
   <section class="section" id="contact">
-    <p class="section-label">04 / contact</p>
-    <div class="contact-wrap">
+    <p class="section-label">05 / contact</p>
+    <div class="contact-wrap reveal">
       <h2>Let's talk.</h2>
       <p class="about-text">Open to internship opportunities and anything web-dev related. Reach out — I reply fast.</p>
       <div class="contact-links">
@@ -175,6 +243,9 @@
   <p>built by Pushkar · <span id="year"></span></p>
 </footer>
 
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="vendor/three.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
